@@ -18,16 +18,15 @@ public class i_null_safety {
         printSomething(getName());
     }
 
-    private static String getName() {
+    public static String getName() {
         return null;
     }
 
-    private static Optional<String> getNameOptional() {
+    public static Optional<String> getNameOptional() {
         return Optional.empty();
     }
 
-    private static void printSomething(final String value) {
-        Objects.requireNonNull(value);
-        System.out.println(value);
+    public static void printSomething(final String value) {
+        System.out.println(value.substring(1));
     }
 }
